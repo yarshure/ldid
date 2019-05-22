@@ -31,3 +31,10 @@ set -x
    40  g++ -I.  -std=c++11 -o ldid2.o ldid2.cpp sha1.c sha224-256.c
    42  g++ -I. -c  -std=c++11 -o ldid2.o ldid2.cpp
    43  g++ -o ldid2 ldid2.o -x c lookup2.c -x c sha1.c -x c sha224-256.c
+
+sh make.sh
++ xcrun -sdk macosx g++ -stdlib=libc++ -mmacosx-version-min=10.9 -arch x86_64 -I. -c -std=c++11 -o ldid.o ldid.cpp
++ xcrun -sdk macosx g++ -stdlib=libc++ -mmacosx-version-min=10.9 -arch x86_64 -I. -o ldid ldid.o -x c lookup2.c -x c sha1.c
++ xcrun -sdk macosx g++ -stdlib=libc++ -mmacosx-version-min=10.9 -arch x86_64 -I. -c -std=c++11 -o ldid2.o ldid2.cpp
++ xcrun -sdk macosx g++ -stdlib=libc++ -mmacosx-version-min=10.9 -arch x86_64 -I. -o ldid2 ldid2.o -x c lookup2.c -x c sha1.c -x c sha224-256.c
+i9-2:ldid-master yarshure$ 
