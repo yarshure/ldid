@@ -25,3 +25,9 @@ set -x
 
 "${flags[@]}" -c -std=c++11 -o ldid2.o ldid2.cpp
 "${flags[@]}" -o ldid2 ldid2.o -x c lookup2.c -x c sha1.c -x c sha224-256.c
+
+   37  g++ -std=c++11 -o ldid2.o ldid2.cpp
+   38  g++ -I.  -std=c++11 -o ldid2.o ldid2.cpp
+   40  g++ -I.  -std=c++11 -o ldid2.o ldid2.cpp sha1.c sha224-256.c
+   42  g++ -I. -c  -std=c++11 -o ldid2.o ldid2.cpp
+   43  g++ -o ldid2 ldid2.o -x c lookup2.c -x c sha1.c -x c sha224-256.c
